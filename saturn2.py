@@ -1,3 +1,0 @@
-ek
-do
-theen
