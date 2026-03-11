@@ -1,1 +1,8 @@
+#!/bin/bash
 
+pvcreate /dev/sdb
+vgcreate data_vg /dev/sdb
+lvcreate -L 10G -n data_lv data_vg
+mkfs.ext4 /dev/data_vg/data_lv
+mkdir /data
+mount /dev/data_vg/data_lv /data
